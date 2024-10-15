@@ -1,21 +1,28 @@
 1 - O que são operações de “Commit”, “Push” e “Pop” efetuadas num repositório?
 
-Commit: É o ato de salvar as mudanças efetuadas localmente. Cada commit é como se fosse uma fotografia do estado do projeto naquele momento, permitindo assim voltar a um estado anterior do projeto caso seja necessário. Para efetuar um commit é necessário adicionar os ficheiros que se pretende guardar, e adicionar uma mensagem que descreva o que foi alterado.
-Push: É o processo de enviar as alterações efetuadas localmente para um repositório remoto (github). Após efetuar um commit, as alterações ficam guardadas apenas no repositório local, para partilhar essas alterações com outros membros da equipa é necessário efetuar um push para enviar as alterações para um repositório remoto.
-Pop: Refere-se à operação de restaurar mudanças que foram previamente guardadas com o comando git stash, ao fazer o git stash pop, é possível recuperar essas mudanças e aplicá-las ao projeto atual.
+Commit: É o ato de salvar as mudanças efetuadas localmente. Cada commit é como se fosse uma fotografia do estado do projeto naquele momento, permitindo assim voltar a um estado anterior do projeto caso seja necessário. Para efetuar um commit é necessário adicionar os ficheiros que se pretende guardar incluindo uma mensagem com as alterações realizadas.
+Push: É o processo de enviar as alterações efetuadas localmente para um repositório remoto (github). Após efetuar um commit, as alterações ficam guardadas apenas no repositório local, para partilhar essas alterações com outros membros da equipa, é necessário efetuar um push para enviar as alterações para um repositório remoto.
+Pop: Refere-se à operação de restaurar alterações que foram previamente guardadas com o comando git stash, ao fazer o git stash pop, é possível recuperar essas alterações e aplicá-las ao projeto atual.
 
 
-2 – Quais sáo as vantagens de usar Branchs num repositório git?
+2 – Quais são as vantagens de usar Branchs num repositório git?
 
-Utilizar branches no Git oferece mais flexibilidade e organização durante o desenvolvimento de software. Cada branch funciona como uma área de trabalho independente, trazendo vários pontos positivos como:
+Utilizar Branchs no Git oferece mais flexibilidade e organização durante o desenvolvimento de software. Cada branch funciona como uma área de trabalho independente, trazendo vários pontos positivos como:
     Desenvolvimento isolado: Ao criar uma branch para resolver um bug ou adicionar uma nova feature, pode-se trabalhar sem interferir no código principal (main branch), reduzindo assim o risco de introduzir problemas no projeto já em produção.
-    Colaboração com equipa: Num projeto podem estar a trabalhar em simultâneo vários membros de uma equipa, as branches permite que cada membro consiga trabalhar na sua branch, e depois de testado é possível facilmente integrar o trabalho de todos os elementos da equipa para uma só branch. Além disso, com a utilização de branches também ajuda a implementar um processo de revisão de código (pull requests), permitindo aos outros membros da equipa validarem e testarem o código antes de ser integrado em outra branches.
-    Controlar versões: As branches permitem organizar e gerir com facilidade várias versões do software, como por exemplo versões estáveis, versões testes, novas funcionalidades.
+    Colaboração com equipa: Num projeto podem estar a trabalhar em simultâneo vários membros de uma equipa, as Branchs permitem que cada membro consegue trabalhar na sua branch e, depois de testadas, é possível facilmente integrar o trabalho de todos os elementos da equipa para uma só branch. Além disso, com a utilização de Branchs também ajuda a implementar um processo de revisão de código (pull requests), permitindo aos outros membros da equipa validar e testar o código antes de ser integrado em outras Branchs.
+    Controlar versões: As Branchs permitem organizar e gerir com facilidade várias versões do software, como por exemplo versões estáveis, versões testes, novas funcionalidades.
 
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
 
-Os conflitos ocorrem quando o Git não consegue fazer o merge automaticamente devido a alterações no mesmo ficheiro que são incompatíveis. Quando isso acontece, ou num "Pop" ou durante um "merge", o Git não consegue decidir qual a versão correta a manter, e é necessário que o utilizador resolva manualmente esses conflitos.
+Os conflitos ocorrem quando o Git não consegue fazer o merge automaticamente devido a alterações incompatíveis no mesmo ficheiro. Quando isso acontece, ou num "Pop" ou durante um "merge", o Git não consegue decidir qual a versão correta a manter, e o utilizador deve resolver manualmente esses conflitos
 Para resolver os conflitos, o primeiro passo é detetar os conflitos, o Git irá indicar no ficheiro onde estão os conflitos, e irá mostrar as duas versões que estão em conflito. O utilizador deve então decidir qual a versão correta a manter, ou fazer uma combinação das duas versões.
 
+
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?
+
+Clone: O comando git clone é utilizado para fazer uma cópia local de um repositório remoto. Essa cópia é exatamente igual à do repositório original, incluindo todo o histórico de commits, Branchs e tags.
+Normalmente, o clone é utilizado quando se pretende colaborar num projeto que já existe, e permite que o utilizador tenha uma cópia local do repositório para trabalhar e depois sincronizar as alterações com o repositório remoto.
+
+Fork: O fork é uma cópia de um repositório remoto que é criada diretamente na conta do GitHub(ou outra plataforma).
+O fork é normalmente utilizado quando se pretende contribuir para um projeto open-source, e permite que o utilizador tenha uma cópia do repositório no seu próprio perfil do GitHub, onde pode fazer alterações e depois enviar um pull request para o repositório original. Isto permite colaborar sem desenvolver diretamente no repositório original.
