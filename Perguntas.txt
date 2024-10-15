@@ -1,11 +1,17 @@
 1 - O que são operações de “Commit”, “Push” e “Pop” efetuadas num repositório?
 
+Commit: É o ato de salvar as mudanças efetuadas localmente. Cada commit é como se fosse uma fotografia do estado do projeto naquele momento, permitindo assim voltar a um estado anterior do projeto caso seja necessário. Para efetuar um commit é necessário adicionar os ficheiros que se pretende guardar, e adicionar uma mensagem que descreva o que foi alterado.
+Push: É o processo de enviar as alterações efetuadas localmente para um repositório remoto (github). Após efetuar um commit, as alterações ficam guardadas apenas no repositório local, para partilhar essas alterações com outros membros da equipa é necessário efetuar um push para enviar as alterações para um repositório remoto.
+Pop: Refere-se à operação de restaurar mudanças que foram previamente guardadas com o comando git stash, ao fazer o git stash pop, é possível recuperar essas mudanças e aplicá-las ao projeto atual.
+
+
 2 – Quais sáo as vantagens de usar Branchs num repositório git?
 
 Utilizar branches no Git oferece mais flexibilidade e organização durante o desenvolvimento de software. Cada branch funciona como uma área de trabalho independente, trazendo vários pontos positivos como:
     Desenvolvimento isolado: Ao criar uma branch para resolver um bug ou adicionar uma nova feature, pode-se trabalhar sem interferir no código principal (main branch), reduzindo assim o risco de introduzir problemas no projeto já em produção.
     Colaboração com equipa: Num projeto podem estar a trabalhar em simultâneo vários membros de uma equipa, as branches permite que cada membro consiga trabalhar na sua branch, e depois de testado é possível facilmente integrar o trabalho de todos os elementos da equipa para uma só branch. Além disso, com a utilização de branches também ajuda a implementar um processo de revisão de código (pull requests), permitindo aos outros membros da equipa validarem e testarem o código antes de ser integrado em outra branches.
     Controlar versões: As branches permitem organizar e gerir com facilidade várias versões do software, como por exemplo versões estáveis, versões testes, novas funcionalidades.
+
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
 
