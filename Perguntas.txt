@@ -2,6 +2,11 @@
 
 2 – Quais sáo as vantagens de usar Branchs num repositório git?
 
+Utilizar branches no Git oferece mais flexibilidade e organização durante o desenvolvimento de software. Cada branch funciona como uma área de trabalho independente, trazendo vários pontos positivos como:
+    Desenvolvimento isolado: Ao criar uma branch para resolver um bug ou adicionar uma nova feature, pode-se trabalhar sem interferir no código principal (main branch), reduzindo assim o risco de introduzir problemas no projeto já em produção.
+    Colaboração com equipa: Num projeto podem estar a trabalhar em simultâneo vários membros de uma equipa, as branches permite que cada membro consiga trabalhar na sua branch, e depois de testado é possível facilmente integrar o trabalho de todos os elementos da equipa para uma só branch. Além disso, com a utilização de branches também ajuda a implementar um processo de revisão de código (pull requests), permitindo aos outros membros da equipa validarem e testarem o código antes de ser integrado em outra branches.
+    Controlar versões: As branches permitem organizar e gerir com facilidade várias versões do software, como por exemplo versões estáveis, versões testes, novas funcionalidades.
+
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
 
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?
