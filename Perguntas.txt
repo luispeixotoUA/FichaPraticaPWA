@@ -15,7 +15,7 @@ Utilizar Branchs no Git oferece mais flexibilidade e organização durante o des
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
 
-Os conflitos ocorrem quando o Git não consegue fazer o merge automaticamente devido a alterações incompatíveis no mesmo ficheiro. Quando isso acontece, ou num "Pop" ou durante um "merge", o Git não consegue decidir qual a versão correta a manter, e o utilizador deve resolver manualmente esses conflitos
+Os conflitos ocorrem quando o Git não consegue fazer o merge automaticamente devido a alterações incompatíveis no mesmo ficheiro. Quando isso acontece, ou num "Pop" ou durante um "merge", o Git não consegue decidir qual a versão correta a manter, e o utilizador deve resolver manualmente esses conflitos.
 Para resolver os conflitos, o primeiro passo é detetar os conflitos, o Git irá indicar no ficheiro onde estão os conflitos, e irá mostrar as duas versões que estão em conflito. O utilizador deve então decidir qual a versão correta a manter, ou fazer uma combinação das duas versões.
 
 

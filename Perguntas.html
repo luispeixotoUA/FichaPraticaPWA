@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas e Respostas Git</title>
+    <!-- Estilos CSS -->
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          line-height: 1.6;
+      }
+      h1 {
+          text-align: center;
+      }
+      p {
+          margin-bottom: 15px;
+      }
+      ul, ol {
+          margin-bottom: 20px;
+      }
+      .bold {
+          font-weight: bold;
+      }
+      .underline {
+          text-decoration: underline;
+      }
+      .image-container {
+          margin-bottom: 30px;
+      }
+      .image-container img {
+          max-width: 60%;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+      }
+      figcaption {
+          font-size: 16px;
+          font-style: italic;
+          margin-top: 10px;
+          text-align: center;
+      }
+  </style>
+</head>
+<body>
+    <!-- Título da página -->
+    <h1>Perguntas e Respostas sobre Git</h1>
+
+    <div style="text-align: right; margin-top: -10px; font-size: 14px; color: #666;">
+      <p><strong>Luis Peixoto</strong> | Nº: <strong>2402741</strong></p>
+  </div>
+
+    <ol>
+        <!-- Pergunta 1 -->
+        <li>
+            <p class="bold">O que são operações de “Commit”, “Push” e “Pop” efetuadas num repositório?</p>
+            <p><span class="bold">Commit</span>: É o ato de salvar as mudanças efetuadas localmente. Cada commit é como se fosse uma fotografia do estado do projeto naquele momento, permitindo assim voltar a um estado anterior do projeto caso seja necessário. Para efetuar um commit é necessário adicionar os ficheiros que se pretende guardar incluindo uma mensagem com as alterações realizadas.</p>
+            <p><span class="bold">Push</span>: É o processo de enviar as alterações efetuadas localmente para um repositório remoto (GitHub). Após efetuar um commit, as alterações ficam guardadas apenas no repositório local. Para partilhar essas alterações com outros membros da equipa, é necessário efetuar um push para enviar as alterações para um repositório remoto.</p>
+            <p><span class="bold">Pop</span>: Refere-se à operação de restaurar alterações que foram previamente guardadas com o comando <i>git stash</span>. Ao fazer o <i>git stash pop</span>, é possível recuperar essas alterações e aplicá-las ao projeto atual.</p>
+        </li>
+        
+        <!-- Pergunta 2 -->
+        <li>
+            <p class="bold">Quais são as vantagens de usar Branchs num repositório git?</p>
+            <p>Utilizar Branchs no Git oferece mais flexibilidade e organização durante o desenvolvimento de software. Cada branch funciona como uma área de trabalho independente, trazendo vários pontos positivos como:</p>
+            <ul>
+                <li><span class="underline">Desenvolvimento isolado</span>: Ao criar uma branch para resolver um bug ou adicionar uma nova feature, pode-se trabalhar sem interferir no código principal (main branch), reduzindo assim o risco de introduzir problemas no projeto já em produção.</li>
+                <li><span class="underline">Colaboração com equipa</span>: Num projeto podem estar a trabalhar em simultâneo vários membros de uma equipa. As Branchs permitem que cada membro consiga trabalhar na sua branch e, depois de testadas, é possível facilmente integrar o trabalho de todos os elementos da equipa para uma só branch. Além disso, com a utilização de Branchs também ajuda a implementar um processo de revisão de código (pull requests), permitindo aos outros membros da equipa validar e testar o código antes de ser integrado em outras Branchs.</li>
+                <li><span class="underline">Controlar versões</span>: As Branchs permitem organizar e gerir com facilidade várias versões do software, como por exemplo versões estáveis, versões testes, novas funcionalidades.</li>
+            </ul>
+            <!-- Imagem de exemplo de fluxo de trabalho com branches -->
+            <div class="image-container">
+                <figure>
+                    <img src="img/GitBranchs.png" alt="Exemplo de fluxo de trabalho com branches no Git" width="400">
+                    <figcaption>Ilustração do fluxo de trabalho com branches no Git. A branch Master em verde, trabalho em paralelo em azul e laranja.</figcaption>
+                </figure>
+            </div>
+        </li>
+
+        <!-- Pergunta 3 -->
+        <li>
+            <p class="bold">Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?</p>
+            <p>Os conflitos ocorrem quando o Git não consegue fazer o merge automaticamente devido a alterações incompatíveis no mesmo ficheiro. Quando isso acontece, ou num <i>Pop</i> ou durante um <i>merge</i>, o Git não consegue decidir qual a versão correta a manter, e o utilizador deve resolver manualmente esses conflitos.</p>
+            <p>Para resolver os conflitos, o primeiro passo é detetar os conflitos, o Git irá indicar no ficheiro onde estão os conflitos, e irá mostrar as duas versões que estão em conflito. O utilizador deve então decidir qual a versão correta a manter, ou fazer uma combinação das duas versões.</p>
+            <!-- Imagem de exemplo de conflito de merge no VSCode -->
+            <div class="image-container">
+                <figure>
+                    <img src="img/MergeConflict.png" alt="Exemplo de conflito de merge no VSCode">
+                    <figcaption>
+                      No VSCode, ao ocorrer um conflito, são apresentadas as seguintes opções para o utilizador: 
+                      <strong>Accept Current Change</strong> (aceitar as alterações atuais), 
+                      <strong>Accept Incoming Change</strong> (aceitar as alterações recebidas), 
+                      <strong>Accept Both Changes</strong> (combinar ambas as alterações), e 
+                      <strong>Compare Changes</strong> (comparar as diferenças). Após escolher a opção, basta salvar o ficheiro e 
+                      executar <i>git add</i> seguido de <i>git commit</i> para finalizar a resolução do conflito.
+                  </figcaption>
+                </figure>
+            </div>
+        </li>
+
+        <!-- Pergunta 4 -->
+        <li>
+            <p class="bold">“Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?</p>
+            <p><span class="bold">Clone</span>: O comando <i>git clone</i> é utilizado para fazer uma cópia local de um repositório remoto. Essa cópia é exatamente igual à do repositório original, incluindo todo o histórico de commits, Branchs e tags. Normalmente, o clone é utilizado quando se pretende colaborar num projeto que já existe, e permite que o utilizador tenha uma cópia local do repositório para trabalhar e depois sincronizar as alterações com o repositório remoto.</p>
+            <p><span class="bold">Fork</span>: O fork é uma cópia de um repositório remoto que é criada diretamente na conta do GitHub (ou outra plataforma). O fork é normalmente utilizado quando se pretende contribuir para um projeto open-source, e permite que o utilizador tenha uma cópia do repositório no seu próprio perfil do GitHub, onde pode fazer alterações e depois enviar um <i>pull request</i> para o repositório original. Isto permite colaborar sem desenvolver diretamente no repositório original.</p>
+            <!-- Imagem de exemplo de Fork e Clone no GitHub -->
+            <div class="image-container">
+              <figure>
+                  <img src="img/ForkVsClone.png" alt="Ilustração do processo de Fork e Clone no GitHub" width="600">
+                  <figcaption>Ilustração do processo de Fork e Pull Request no GitHub, mostrando a interação entre repositórios e o clone local.</figcaption>
+              </figure>
+          </div>
+        </li>
+    </ol>
+
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; background-color: #f8f9fa; font-size: 14px; color: #333; border-top: 2px solid #ccc;">
+      <p>Atividade realizada por <strong>Luis Peixoto</strong> | Nº: <strong>2402741</strong></p>
+      <p>Programação Web Avançada 2024</p>
+      <p>Mestrado em Engenharia Informática e Tecnologia Web</p>
+  </footer>
+</body>
+</html>
